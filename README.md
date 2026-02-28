@@ -4,6 +4,8 @@
 
 File Uploader is a full-stack web application for uploading, organizing, and downloading files. It was built as a portfolio project to practice authentication, file handling, and relational data modeling with Node.js, Express, and Prisma.
 
+[Watch the video overview](https://youtu.be/oMoipJQL1wk)
+
 ## Table of Contents
 
 - [Features](#features)
