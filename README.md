@@ -74,7 +74,7 @@ File Uploader is a full-stack web application for uploading, organizing, and dow
    PORT=3000
    ```
 
-   Replace `USER` with your actual computer username (for example, `jacob`).
+   Replace `USER` with your actual computer username (for example, `jacob`) and replace `your-session-secret` with a secure string.
 
 4. Ensure your local PostgreSQL server is running and that a database named `file_uploader` exists before running migrations.
 
