@@ -1,0 +1,25 @@
+<header>
+  <a href="<%= isAuthenticated ? '/drive' : '/' %>"><h2>File Uploader</h2></a>
+  <div class="hstack">
+    <% if (isAuthenticated) { %>
+      <span class="badge success hstack gap-2"><i class="fa-solid fa-user"></i> <%- currentUser.username %></span>
+    <% } %>
+    <ot-dropdown>
+    <button popovertarget="nav-menu" class="outline">
+      Menu
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
+    </button>
+    <menu popover id="nav-menu">
+         <% if (!isAuthenticated) { %>
+          <a role="menuitem" href="/auth/sign-in"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In</a>
+          <a role="menuitem" href="/auth/sign-up"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+      <% } %>
+      <% if (isAuthenticated) { %>
+        <a role="menuitem" href="/drive"><i class="fa-solid fa-hard-drive"></i> My Drive</a>
+        <a role="menuitem" href="/auth/sign-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+      <% } %>
+    </menu>
+  </ot-dropdown>
+  </div>
+</header>
+

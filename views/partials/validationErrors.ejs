@@ -1,0 +1,7 @@
+<% if (validationErrors) { %>
+    <ul>
+    <% validationErrors.forEach(error => { %>
+        <li><%= error.msg %></li>
+    <% }) %>
+    </ul>
+<% } %>

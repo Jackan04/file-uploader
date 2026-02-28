@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <%- include("../partials/header.ejs") %> <%-
+      include("../partials/page-title.ejs") %>
+
+      <form action="/drive/files/upload" method="post" enctype="multipart/form-data"> 
+        <%- include("../partials/validationErrors.ejs") %>
+        <label for="file">
+          <input data-field type="file" id="file" name="file" />
+        </label>
+        <label for="folderId">
+          Folder
+          <select data-field name="folderId" id="folderId">
+            <option value="" selected>No Folder</option>
+            <% folders.forEach(folder => { %>
+                <option value="<%= folder.id %>"><%= folder.name %></option>
+            <% }) %>
+          </select>
+        </label>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>

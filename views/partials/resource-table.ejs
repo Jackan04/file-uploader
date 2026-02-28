@@ -1,0 +1,76 @@
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% allResources.forEach((resource) => { %>
+        <% const menuId = `${resource.resourceType}-menu-${resource.id}`; %>
+        <tr>
+          <td class="hstack">
+            <% if (resource.resourceType === "Folder") { %>
+              <i class="fa-regular fa-folder"></i>
+              <a href="/drive/folders/details/<%= resource.id %>"><b><%= resource.name %></b></a>
+            <% } else { %>
+              <i class="fa-regular fa-file"></i>
+              <a href="/drive/files/download/<%= resource.id %>"><b><%= resource.name %></b></a>
+            <% } %>
+          </td>
+          <td>
+            <%= resource.resourceType %>
+          </td>
+          <td>
+            <% if (resource.resourceType === "Folder") { %>
+              -
+            <% } else { %>
+              <%= resource.size  %> 
+            <% } %>
+          </td>
+          <td>
+            <p><%= resource.createdAt %></p>
+          </td>
+          <td>
+            <ot-dropdown>
+              <button popovertarget="<%= menuId %>" class="outline small">
+                Actions
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <menu popover id="<%= menuId %>">
+                <% if (resource.resourceType !== "Folder") { %>
+                 <a role="menuitem" href="/drive/files/download/<%= resource.id %>"><i class="fa-solid fa-download"></i> Download</a>
+                <% } %>
+                <a
+                  role="menuitem"
+                  href="/drive/<%= resource.resourceType === "Folder" ? "folders" : "files" %>/update/<%= resource.id %>"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i> Edit
+                </a>
+                <form
+                  action="/drive/<%= resource.resourceType === "Folder" ? "folders" : "files" %>/delete/<%= resource.id %>"
+                  method="post"
+                >
+                  <button role="menuitem" type="submit"><i class="fa-solid fa-trash"></i> Delete</button>
+                </form>
+              </menu>
+            </ot-dropdown>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

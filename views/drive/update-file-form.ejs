@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <%- include("../partials/header.ejs") %> <%-
+      include("../partials/page-title.ejs") %>
+
+      <form action="/drive/files/update/<%= file.id %>" method="post">
+        <%- include("../partials/validationErrors.ejs") %>
+        <label for="name">
+            Filename
+            <input type="text" name="name" id="name" value="<%= file.name %>">
+        </label>
+        <label for="folderId">
+          Folder
+          <select data-field name="folderId" id="folderId">
+            <option value="" selected>No Folder</option>
+            <% folders.forEach(folder => { %>
+                <option <%= folder.id === file.folderId ? 'selected' : null %> value="<%= folder.id %>"><%= folder.name %></option>
+            <% }) %>
+          </select>
+        </label>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </body>
+</html>

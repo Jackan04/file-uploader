@@ -1,0 +1,24 @@
+:root {
+  --spacing-sm: 0.6rem;
+  --spacing-md: 1.2rem;
+  --spacing-lg: 1.8rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 1rem auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+td a {
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <%- include("../partials/header.ejs") %> <%-
+      include("../partials/page-title.ejs") %>
+
+      <form action="/drive/folders/update/<%= folder.id %>" method="post">
+        <%- include("../partials/validationErrors.ejs") %>
+        <label for="name">
+          Folder Name
+          <input
+            data-field
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Folder Name"
+            value="<%= folder.name %>"
+          />
+        </label>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </body>
+</html>

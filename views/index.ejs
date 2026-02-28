@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <%- include("./partials/header.ejs") %>
+
+      <article class="card mt-6">
+        <header><%-include("./partials/page-title.ejs") %></header>
+        <p>
+          File Uploader helps you store, organize, and manage your files in one
+          place.
+        </p>
+        <p>
+          Create folders, upload files, and keep everything structured inside
+          your personal drive.
+        </p>
+        <footer class="flex gap-2 mt-4">
+          <a class="button outline" href="/auth/sign-up">Sign Up</a>
+          <a class="button" href="/auth/sign-in">Sign In</a>
+        </footer>
+      </article>
+    </div>
+  </body>
+</html>

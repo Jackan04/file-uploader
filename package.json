@@ -1,0 +1,35 @@
+{
+  "name": "file-uploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jacob Asker",
+    "url": "https://jacobasker.com"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@jacobasker/helpers": "^1.0.3",
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "@quixo3/prisma-session-store": "^3.1.19",
+    "bcrypt": "^6.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.3.1",
+    "ejs": "^4.0.1",
+    "eslint": "^10.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.1",
+    "multer": "^2.1.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.19.0",
+    "prisma": "^7.4.1"
+  }
+}

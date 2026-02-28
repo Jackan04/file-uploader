@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <%- include("../partials/header.ejs") %> <%-
+      include("../partials/page-title.ejs") %>
+      <menu class="buttons">
+        <li>
+          <a class="button outline" href="/drive/files/upload"
+            ><i class="fa-solid fa-upload"></i> File</a
+          >
+        </li>
+      </menu>
+      <% if (files.length === 0) { %>
+        <article class="card align-center mt-6">
+          <h3>Nothing here yet</h3>
+          <p class="text-light">Get started by uploading your first file.</p>
+          <footer class="hstack justify-center mt-4">
+            <a class="button" href="/drive/files/upload">Upload a File</a>
+          </footer>
+        </article>
+      <% } else { %>
+        <%- include("../partials/file-table.ejs") %>
+      <% } %>
+    </div>
+  </body>
+</html>
