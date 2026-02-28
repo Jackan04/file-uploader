@@ -38,7 +38,8 @@ File Uploader is a full-stack web application for uploading, organizing, and dow
 | bcrypt                    | Password hashing                                            |
 | express-validator         | Request input validation                                    |
 | date-fns                  | Date formatting utilities                                   |
-| oat                       | Lightweight UI library for styling and components           |
+| oat                       | UI library for styling and components           |
+| Font Awesome              | Icon library                                |
 
 ## Screenshots
 
