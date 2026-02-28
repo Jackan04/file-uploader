@@ -38,8 +38,8 @@ File Uploader is a full-stack web application for uploading, organizing, and dow
 | bcrypt                    | Password hashing                                            |
 | express-validator         | Request input validation                                    |
 | date-fns                  | Date formatting utilities                                   |
-| oat                       | UI library for styling and components           |
-| Font Awesome              | Icon library                                |
+| oat                       | UI library for styling and components                       |
+| Font Awesome              | Icon library                                                |
 
 ## Screenshots
 
@@ -56,7 +56,7 @@ File Uploader is a full-stack web application for uploading, organizing, and dow
 1. Clone the repository and move into the project folder:
 
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:Jackan04/file-uploader.git
    cd file-uploader
    ```
 
